@@ -1,0 +1,54 @@
+/* .navbar{
+    background-color: #222222;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    height: 10vh;
+    line-height: 10vh;
+}
+
+nav ul li{
+    display: inline-block;
+    transition: all 0.5s ease-in;
+    margin: 0 30px 0 0;
+}
+
+nav ul li a{
+    color: white;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+nav ul li a:hover{
+    color: #31b675;
+} */
+
+.navbar {
+    background: #222222;
+    /*position: sticky;*/
+    top: 0;
+    z-index: 999;
+    height: 10vh;
+    line-height: 10vh;
+  }
+  
+  nav ul li {
+    display: inline-block;
+    transition: all 0.2s ease-out;
+    margin: 0 30px 0 0;
+  }
+  
+  nav ul li a {
+    color: #fff;
+    font-weight: 100;
+    font-size: 15px;
+    letter-spacing: 1px;
+    transition: all 0.2s ease-out;
+    opacity: 0.8;
+  }
+  nav ul li a:hover {
+    color: #31b675;
+  }
+
