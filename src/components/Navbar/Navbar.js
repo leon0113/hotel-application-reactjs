@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTrashAlt, faArrowAltCircleRight, faAddressCard, faCross } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
+import Header from '../Header/Header';
 
 
 
@@ -49,6 +50,8 @@ const Navbar = () => {
                 </div>
 
             </nav>
+
+            <Header></Header>
         </>
     );
 };
