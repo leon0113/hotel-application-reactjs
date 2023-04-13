@@ -1,39 +1,43 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faTrashAlt, faArrowAltCircleRight, faAddressCard } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faTrashAlt, faArrowAltCircleRight, faAddressCard, faCross } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import './Navbar.css'
 
 
 
 const Navbar = () => {
+    const [click, setClick] = useState(false);
+
+    const handleClick = () => setClick(!click);
+    const closeMobileMenu = () => setClick(false);
     return (
         <>
             <nav className='navbar'>
                 <div className="container flex-space">
-                    <div className="menu-icon">
-                        <FontAwesomeIcon icon={faBars} />
+                    <div className="menu-icon" onClick={handleClick}>
+                        {click ? <FontAwesomeIcon icon={faCross} /> : <FontAwesomeIcon icon={faBars}></FontAwesomeIcon>}
                     </div>
-                    <ul className="nav-menu active">
-                        <li>
-                            <Link to="/">Home</Link>
-                            <Link to="/about">About</Link>
-                            <Link to="/gallery">Gallery</Link>
-                            <Link to="/destination">Destination</Link>
-                            <Link to="/blog">Blog</Link>
-                            <Link to="/testimonial">Testimonial</Link>
-                            <Link to="/contact">Contact Us</Link>
-                        </li>
+                    <ul className={click ? "nav-menu active" : "nav-menu"}>
+
+                        <li> <Link to="/" onClick={closeMobileMenu}>Home</Link></li>
+                        <li>   <Link to="/about" onClick={closeMobileMenu}>About</Link></li>
+                        <li>  <Link to="/gallery" onClick={closeMobileMenu}>Gallery</Link></li>
+                        <li>  <Link to="/destination" onClick={closeMobileMenu}>Destination</Link></li>
+                        <li>  <Link to="/blog" onClick={closeMobileMenu}>Blog</Link></li>
+                        <li> <Link to="/testimonial" onClick={closeMobileMenu}>Testimonial</Link></li>
+
+                        <li> <Link to="/contact" onClick={closeMobileMenu}>Contact Us</Link></li>
                     </ul>
                     <div className="login-area flex">
                         <li>
                             <Link to='/sign-in'>
-                                <FontAwesomeIcon icon={faArrowAltCircleRight} />Sign In
+                                Sign In
                             </Link>
                         </li>
                         <li>
                             <Link to='/register'>
-                                <FontAwesomeIcon icon={faAddressCard} />Register
+                                Register
                             </Link>
                         </li>
                         <li>
