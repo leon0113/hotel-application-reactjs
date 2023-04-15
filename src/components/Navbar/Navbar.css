@@ -22,11 +22,11 @@ nav ul li a{
 }
 
 nav ul li a:hover{
-    color: #31b675;
+    color: #BF56A6;
 } */
 
 .navbar {
-    background: #222222;
+    background: #56275f;
     /*position: sticky;*/
     top: 0;
     z-index: 999;
@@ -49,7 +49,7 @@ nav ul li a:hover{
     opacity: 0.8;
   }
   nav ul li a:hover {
-    color: #31b675;
+    color: #BF56A6;
   }
 
 .nav-links-mobile{
@@ -97,7 +97,7 @@ nav i{
         display: block;
     }
     nav ul.active{
-        background-color: #31b675;
+        background-color: #BF56A6;
         left: 0;
         opacity: 1;
         transition: 0.5s;

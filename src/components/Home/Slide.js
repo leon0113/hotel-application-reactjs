@@ -46,8 +46,22 @@ const Slide = ({ slides }) => {
             {/* //! form section */}
             <section className='slide-form'>
                 <div className="container">
-                    <h2>Enjoy your stay</h2>
+                    <h2>Enjoy your stay!</h2>
                     <span>Search and Book Your Favourite Hotel</span>
+
+                    <form action="">
+                        <input type="text" placeholder='Search City' name='' id='' />
+                        <div className="flex-space">
+                            <input type="date" placeholder='Check In' name='' id='' />
+                            <input type="date" placeholder='Check Out' name='' id='' />
+                        </div>
+                        <div className="flex-space">
+                            <input type="number" placeholder='Adult(s)' name='' id='' />
+                            <input type="number" placeholder='Childern(s)' name='' id='' />
+                        </div>
+                        <input type="number" placeholder='Rooms' />
+                        <input type="Submit" value='Search' className='submit' />
+                    </form>
                 </div>
             </section>
         </>
